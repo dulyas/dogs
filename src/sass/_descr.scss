@@ -1,0 +1,53 @@
+.blackcolor {
+    color: black;
+}
+
+.descr {
+    background: url(../img/arcane_bg.png) center center/cover no-repeat;
+}
+.descr__box {
+    padding: 120px 0px;
+    display: flex;
+    &__right {
+        margin-left: 68px;
+        &__name {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 40px;
+        color: #000000;
+        margin-top: 15px;
+        color: transparent;    
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-image: linear-gradient(to right, rgb(255, 255, 255), $maincolor);
+        }
+        &__text {
+            margin-top: 22px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &__mini__flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            &-item {
+                width: 50%;
+                display: flex;
+                align-items: flex-start;
+                margin-top: 15px;
+                img {
+                    margin-right: 15px;
+                    z-index: 0;
+                }
+                &__text {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #000000;
+
+                }
+            }
+        }
+    }
+}

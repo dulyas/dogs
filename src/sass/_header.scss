@@ -1,0 +1,35 @@
+.header {
+    min-height: 100vh;
+    background: url(../img/main_bg.jpg) center center/cover no-repeat;
+    padding-top: 210px;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.title {
+margin-left: 7px;
+position: relative;
+font-weight: bold;
+font-size: 16px;
+color: #ffffff;
+z-index: 0;
+        }
+
+.promo {
+    position: relative;
+    &__circle   { position: relative;
+    @include before_circle
+                }
+    &__descr {
+    font-weight: bold;
+    font-size: 48px;
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right, rgb(255, 255, 255), $maincolor);
+             }
+            
+       }
