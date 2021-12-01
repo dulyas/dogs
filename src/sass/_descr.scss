@@ -14,6 +14,7 @@
     display: flex;
     &__right {
         margin-left: 68px;
+        width: 50%;
         &__name {
         font-weight: bold;
         font-size: 36px;
@@ -58,8 +59,11 @@
 }
 
 
-@media (max-width:1400px){
+@media (max-width:932px){
     .descr__img {
         display: none;
+    }
+    .descr__box__right {
+        width: 100%;
     }
 }
