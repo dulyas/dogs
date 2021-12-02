@@ -26,6 +26,7 @@ $maingradient: linear-gradient(to right, rgb(29, 99, 1), $maincolor);
 @import 'sidepanel';
 @import 'descr';
 @import 'modal';
+@import 'exp';
 
 .show {
     display: block;

@@ -8,6 +8,7 @@
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 5px;
 }
 .title {
 margin-left: 7px;
@@ -34,3 +35,9 @@ z-index: 0;
              }
             
        }
+.block {
+    width: 60px;
+    height: 6px;
+    border: none;
+    background: $maingradient;
+}

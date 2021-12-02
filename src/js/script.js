@@ -20,4 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add('hide');
         document.body.style.overflow = '';
     }
+
+    document.querySelectorAll('.block').forEach((item) =>{
+        item.addEventListener('click', (e) => {
+            e.target.classList.add('animate__fadeOutRight');
+            e.target.classList.add('animate__animated');
+            setTimeout(()=>{
+                e.target.classList.remove('animate__fadeOutRight');
+                e.target.classList.remove('animate__animated');
+            }, 5000)
+        })
+    }
+    )
+
   });
