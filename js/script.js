@@ -112,18 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
     function prevClick() {
         if (offset == 0) {
             offset = ((slides.length-1) * widthNum);
-            slideIndex = 5;
+            slideIndex = slides.length+1;
         } else {
             offset -= widthNum;
         }
         slideIndex--;
-    if (slideIndex < 10) {
-        currentSlide.textContent = `0${slideIndex}`;
-    } else {
-        maxSlide.textContent = `${slideIndex}`;
+        pushSlideIndex();
+        slider.style.transform = `translateX(-${offset}px)`;
     };            
-    slider.style.transform = `translateX(-${offset}px)`;
-    }
+
+    
 
     function nextClick() {
         if (offset == (slides.length-1) * widthNum) {
@@ -156,17 +154,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let formData = new FormData(form);
-            const json = JSON.stringify(Object.fromEntries(formData));
-            console.log(json);
-            ajaxSend(json, 'http://localhost:3000/requests').then(response => console.log(response))
-            .catch(error => console.error(error))
-            .finally(() => form.reset());
-        });
+    // const forms = document.querySelectorAll('form');
+    // forms.forEach(form => {
+    //     form.addEventListener('submit', (e) => {
+    //         e.preventDefault();
+    //         let formData = new FormData(form);
+    //         const json = JSON.stringify(Object.fromEntries(formData));
+    //         console.log(json);
+    //         ajaxSend(json, 'http://localhost:3000/requests').then(response => console.log(response))
+    //         .catch(error => console.error(error))
+    //         .finally(() => form.reset());
+    //     });
 
 
 
@@ -174,20 +172,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-        const ajaxSend = async (formData, url) => {
-            const res = await fetch(url, {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: formData
-            });
-            return await res.json();
+    //     const ajaxSend = async (formData, url) => {
+    //         const res = await fetch(url, {
+    //             method: "POST",
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: formData
+    //         });
+    //         return await res.json();
 
-        };
+    //     };
 
 
-    });
+    // });
 
 
   });
