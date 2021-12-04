@@ -1,0 +1,119 @@
+.exp {
+    background: url(../img/arcane_bg_1.png) center center/cover no-repeat;
+    padding-top: 55px;
+    min-height: 100vh;
+    color: white;
+    z-index: 11;
+    &__maintext {
+        display: block;
+        width: 80%;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+    &__title {
+        z-index: 0;
+        font-size: 20px;
+    }
+    &__flex {
+        display: flex;
+        margin-top: 50px;
+        position: relative;
+        &-item-title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            margin-left: 40px;
+        }
+    }
+    &__wrap {
+        margin-top: 50px;
+        margin-left: 30px;
+        &__titles {
+            margin-left: 13px;
+            position: relative;
+        }
+        &-flex {
+            display: flex;
+            img {
+                transform: translate(44%, 15%);
+                z-index: 5;
+            }
+        }
+    }
+}
+
+.tac {
+    text-align: center;
+}
+.center {
+    left: -15px;
+    margin: 0 auto;
+}
+
+.exp-fix {
+    left: -36px;
+    z-index: 0;
+    top: 5px;
+}
+
+.exp_wrap__titles-descr {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 8px;
+}
+
+.mini {
+
+        width: 15px;
+        height: 15px;      
+        border-radius: 100%; 
+        background: $maincolor;
+        position: absolute;
+        top: 7px;
+}
+
+.line {
+        width: 30px;
+        height: 2px;
+        border: none;
+        background: linear-gradient(to left, rgb(29, 99, 1), $maincolor);
+        position: absolute;
+        left: -60px;
+        transform: translateY(-300%);
+}
+
+.lineY {
+        width: 390px;
+        height: 2px;
+        background: $maincolor;
+        border: none;
+        transform: rotate(90deg);
+        position: absolute;
+        left: -255px;
+        top: 130px
+}
+.expMob {
+    display: none;
+}   
+
+
+@media (max-width:500px) {
+    .line {display: none;}
+    .lineY {display: none;}
+    .mini {display: none;}
+    .exp-fix {
+        top: 35px;
+    }
+    .expPC {
+        display: none;
+    }
+    .expMob {
+        display: block;
+    }
+}
+

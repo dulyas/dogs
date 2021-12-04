@@ -1,0 +1,34 @@
+.slider {
+    background: url(../img/arcane_bg_3.png) center center/cover no-repeat;
+    padding-top: 55px;
+    min-height: 100vh;
+    color: white;
+    &__flexwrap {
+        margin: 0 auto;
+        display: flex;
+        transition: 0.5s all;
+    }
+    &__sz {
+        overflow: hidden;
+    }
+    &-btns {
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        margin-top: 15px;
+    }
+}
+.slide {
+max-width: 100vw;
+}
+#maxSlide {
+    font-size: 55px;
+}
+
+@media (max-width: 350px) {
+    #prev, #next {
+        height: 50px;
+        width: 50px;
+        margin-top: 15px;
+    }
+}
