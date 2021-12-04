@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });    
 
     function prevClick() {
-        if (offset == 0) {
+        if (slideIndex == 1) {
             offset = ((slides.length-1) * widthNum);
             slideIndex = slides.length+1;
         } else {
