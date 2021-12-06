@@ -1,0 +1,41 @@
+.calc {
+    background: url(../img/arcane_bg_4.png) center center/cover no-repeat;
+    padding-top: 110px;
+    padding-bottom: 30px;
+    z-index: -1;
+    transition: 0.8s all;
+    &__wrapper {
+        margin-top: 30px;
+    }
+    &__block {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between; 
+        align-content: center;
+        &-item {
+            width: 150px;
+            height: 60px;
+            border: 2px black solid;
+            border-radius: 5px;
+            padding: 5px auto 5px auto;
+            text-align: center;
+            padding-top: 10px;
+            &__active {
+                background: $maingradient;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    &__result {
+        width: 500px;
+        height: 150px;
+        background: white;
+        margin: 30px auto;
+        &-item {
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+}

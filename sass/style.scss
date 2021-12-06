@@ -28,6 +28,7 @@ $maingradient: linear-gradient(to right, rgb(29, 99, 1), $maincolor);
 @import 'modal';
 @import 'exp';
 @import 'slider';
+@import 'calc';
 
 .show {
     display: block;
