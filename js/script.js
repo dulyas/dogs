@@ -1,10 +1,12 @@
 "use strict";
+import {main} from './modules/main';
+import {calc} from './modules/calc';
+import {nav} from './modules/nav';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const main = require('./modules/main'),
-    calc = require('./modules/calc');
     main();
     calc();
+    nav();
 
 
 

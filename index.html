@@ -53,7 +53,31 @@
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Социальные сети</span></div>
     </aside>
-    <header class="header">
+    <header class="header" id="header">
+        <nav class="nav">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu">
+                    <ul class="menu__items">
+                        <li class="menu-item"><a href="#header">Главная</a></li>
+                        <li class="menu-item"><a href="#exp">Мой опыт</a></li>
+                        <li class="menu-item"><a href="#skill">Мои навыки</a></li>
+                        <li class="menu-item"><a href="#slider">DOG SLIDER</a></li>
+                        <li class="menu-item"><a href="#calc">DOG КАЛЬКУЛЯТОР</a></li>
+                        <li class="menu-item"><a href="#">???</a></li>
+                    </ul>
+                    <div class="menu-soc">
+                        <a href="https://vk.com/dulyas"><img src="icons/facebook.svg" alt=""></a>
+                        <a href="https://vk.com/dulyas"><img src="icons/instagram.svg" alt=""></a>
+                        <a href="https://vk.com/dulyas"><img src="icons/github.svg" alt=""></a>
+                    </div>
+            </div>
+            <div class="menu-bg">1</div>        
+            </div>
+        </nav>
         <div class="container">
             <div class="promo">
                 <div class="promo__circle animate__animated animate__bounce wow animate__infinite"></div>
@@ -62,12 +86,12 @@
                 </div>
                 <h1 class="promo__descr">Я не web-разработчик,<br> это просто сайт про собак</h1>
                 <a href="#"><button class="button">Про меня</button></a>
-                <a href="#"><button id="sumModal" class="button dog">Про собак</button></a>
+                <a href="#"><button id="sumModal" class="button dog">Связь</button></a>
             </div>
         </div>
     </header> 
     <section class="descr">
-        <div class="container">
+        <div class="container" id="skill">
             <div class="descr__box">
                 <div class="descr__box__left">
                     <img src="img/photo1.jpg" alt="dogs" class="descr__img">
@@ -108,7 +132,7 @@
             </div>
         </div>
     </section>
-    <section class="exp">
+    <section class="exp" id="exp">
         <div class="container">
             <div class="promo__circle animate__animated animate__fadeIn wow tac center"></div>
             <div class="title tac">Опыт</div>
@@ -178,7 +202,7 @@
             </div>
         </div>
     </section>
-    <section class="slider">
+    <section class="slider" id="slider">
         <div class="container">
             <div class="promo__circle animate__animated animate__fadeIn wow tac center"></div>
             <div class="title tac">TestSlider</div>
@@ -202,7 +226,7 @@
             </div>
         </div>
     </section>
-    <section class="calc">
+    <section class="calc" id="calc">
         <div class="container">
             <div class="promo__circle animate__animated animate__fadeIn wow tac center"></div>
             <div class="title tac">DogCalc</div>

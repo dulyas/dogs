@@ -1,5 +1,5 @@
 function main() {
-    const modal = document.querySelector('.modal')
+    const modal = document.querySelector('.modal');
     const btnmodal = document.querySelector('#sumModal');
     btnmodal.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -150,4 +150,4 @@ function main() {
 
 }
 
-module.exports = main;
+export {main};

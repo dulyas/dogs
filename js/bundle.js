@@ -1,12 +1,17 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/modules/calc.js":
 /*!****************************!*\
   !*** ./js/modules/calc.js ***!
   \****************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "calc": () => (/* binding */ calc)
+/* harmony export */ });
 function calc() {
 
     let ratio = {
@@ -67,7 +72,7 @@ function calc() {
 }
 
 
-module.exports = calc;
+
 
 /***/ }),
 
@@ -75,10 +80,14 @@ module.exports = calc;
 /*!****************************!*\
   !*** ./js/modules/main.js ***!
   \****************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "main": () => (/* binding */ main)
+/* harmony export */ });
 function main() {
-    const modal = document.querySelector('.modal')
+    const modal = document.querySelector('.modal');
     const btnmodal = document.querySelector('#sumModal');
     btnmodal.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -229,7 +238,45 @@ function main() {
 
 }
 
-module.exports = main;
+
+
+/***/ }),
+
+/***/ "./js/modules/nav.js":
+/*!***************************!*\
+  !*** ./js/modules/nav.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "nav": () => (/* binding */ nav)
+/* harmony export */ });
+function nav() {
+    const hamburger = document.querySelector('.hamburger'),
+    menu = document.querySelector('.menu'),
+    menuBg = document.querySelector('.menu-bg'),
+    menuItem = document.querySelectorAll('.menu-item');
+    hamburger.addEventListener('click', ()=>{
+        toggleNav();
+    })
+    menuItem.forEach((item) => {
+        item.addEventListener('click', ()=> {
+            toggleNav();
+        })
+    })
+    menuBg.addEventListener('click', ()=>{
+        toggleNav();
+    })
+
+    function toggleNav() {
+        hamburger.classList.toggle('hamburger__active');
+        menu.classList.toggle('menu__active');
+        menuBg.classList.toggle('menu-bg__active');
+    }
+};
+
+
 
 /***/ })
 
@@ -260,20 +307,54 @@ module.exports = main;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./js/script.js ***!
   \**********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/main */ "./js/modules/main.js");
+/* harmony import */ var _modules_calc__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
+/* harmony import */ var _modules_nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/nav */ "./js/modules/nav.js");
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const main = __webpack_require__(/*! ./modules/main */ "./js/modules/main.js"),
-    calc = __webpack_require__(/*! ./modules/calc */ "./js/modules/calc.js");
-    main();
-    calc();
+    (0,_modules_main__WEBPACK_IMPORTED_MODULE_0__.main)();
+    (0,_modules_calc__WEBPACK_IMPORTED_MODULE_1__.calc)();
+    (0,_modules_nav__WEBPACK_IMPORTED_MODULE_2__.nav)();
 
 
 

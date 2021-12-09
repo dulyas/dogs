@@ -3,7 +3,7 @@
     padding-top: 55px;
     min-height: 100vh;
     color: white;
-    z-index: 11;
+    z-index: 3;
     &__maintext {
         display: block;
         width: 80%;
@@ -39,7 +39,7 @@
             display: flex;
             img {
                 transform: translate(44%, 15%);
-                z-index: 5;
+                z-index: 3;
             }
         }
     }

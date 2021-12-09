@@ -29,13 +29,16 @@
         }
     }
     &__result {
-        width: 500px;
+        width: 55vw;
         height: 150px;
         background: white;
         margin: 30px auto;
+        background:rgba(94, 94, 94, 0.7);
+        border-radius: 8px;
         &-item {
             text-align: center;
             font-size: 30px;
+            color: white;
         }
     }
 }

@@ -1,0 +1,110 @@
+.nav {
+    transition: 1s all;
+    position: relative;
+}
+
+.hamburger {
+    color: black;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    z-index: 5;
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #151812;
+        margin: 3px auto;
+        transition: 0.3s all;
+        &:nth-child(2) {
+            width: 35px;
+        }
+    }
+    &__active {
+        transform: translateY(2px);
+        span { 
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(4px);
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-4px);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu { 
+    position: fixed;
+    right: -50%;
+    background: $maingradient;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: 1s all;
+    z-index: 4;
+    &-bg {
+        position: fixed;
+        left: -50%;
+        background: rgba(0,0,0,.5);
+        width: 50%;
+        height: 100%;
+        top: 0;
+        transition: 1s all;
+        z-index: 4;
+        &__active {
+            left: 0;
+        }
+    }
+    &__active {
+        right: 0;
+    }
+    &__items {
+        margin-left: 25%;
+        margin-top: 15%;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2.5vw;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+    ul {
+        list-style: none;
+        li {
+            margin-top: 7vh;
+        }
+        a {
+            color: rgba(255, 255, 255, 0.74);
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                background: #00ca4d50;
+                border-radius: 5px;
+                box-shadow: 0 0 10px #00ca4e50, 0 0 40px #00ca4e50, 0 0 80px #00ca4e50;
+                transform: scale(1.5);
+                font-size: 2.7vw;
+                transition: 1s;
+            }
+        }
+    }
+    &-soc {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        img {
+            transform: rotate(90deg);
+            margin: 0 15px;
+            &:hover {
+                background: #00ca4d50;
+                box-shadow: 0 0 10px #00ca4e50, 0 0 40px #00ca4e50, 0 0 80px #00ca4e50;
+                transform: rotate(90deg) scale(1.5);
+                transition: 1s;
+            }
+        }
+    }
+}
