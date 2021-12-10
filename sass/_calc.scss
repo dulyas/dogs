@@ -13,13 +13,14 @@
         justify-content: space-around; 
         align-content: center;
         &-item {
-            width: 18vw;
+            width: 20vw;
             height: 60px;
             border: 2px black solid;
             border-radius: 5px;
             padding: 5px auto 5px auto;
             text-align: center;
             padding-top: 10px;
+            font-size: 0.7em;
             &__active {
                 background: $maingradient;
             }

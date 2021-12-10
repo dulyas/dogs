@@ -11,8 +11,9 @@ function nav() {
             toggleNav();
         })
     })
-    menuBg.addEventListener('click', ()=>{
+    menuBg.addEventListener('click', ()=>{ {
         toggleNav();
+        }
     })
 
     function toggleNav() {

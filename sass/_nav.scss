@@ -46,6 +46,8 @@
     top: 0;
     transition: 1s all;
     z-index: 4;
+    overflow-y: scroll;
+    overflow-x: hidden;
     &-bg {
         position: fixed;
         left: -50%;
@@ -110,6 +112,7 @@
 }
 
 @media (max-height: 773px) {
+
     .menu__items {
         font-size: 2vw;
         margin-top: 5%;
